@@ -99,10 +99,10 @@ window.Barrier = (function() {
     this.waiting = [];
 
     // These funtions may be called passed arround. Bind them.
-    this.aquire.bind(this);
-    this.release.bind(this);
-    this.isSet.bind(this);
-    this.wait.bind(this);
+    this.aquire = this.aquire.bind(this);
+    this.release = this.release.bind(this);
+    this.isSet = this.isSet.bind(this);
+    this.wait = this.wait.bind(this);
   };
 
   Barrier.prototype = {
