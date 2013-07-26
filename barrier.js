@@ -42,7 +42,7 @@ window.Barrier = (function() {
    * Instantiate the barrier
    *
    * Arguments:
-   *   n - (optinal) initiate with n barriers pre-aquired.
+   *   n - (optinal) initiate with n barriers pre-acquired.
    *
    * Throws:
    *   Error if n < 0
@@ -55,7 +55,7 @@ window.Barrier = (function() {
     this.waiting = [];
 
     // These funtions may be called passed arround. Bind them.
-    this.aquire = this.aquire.bind(this);
+    this.acquire = this.acquire.bind(this);
     this.release = this.release.bind(this);
     this.isSet = this.isSet.bind(this);
     this.wait = this.wait.bind(this);
@@ -72,13 +72,13 @@ window.Barrier = (function() {
      * Aquire the barrier.
      *
      * Arguments:
-     *   n - (optional) aquire n barriers
+     *   n - (optional) acquire n barriers
      *
      * Throws:
      *   Error if n <= 0
      *
      **/
-    aquire: function(n) {
+    acquire: function(n) {
       if (arguments.length === 0) {
         this.value++;
       } else if (n >= 0) {
@@ -117,7 +117,7 @@ window.Barrier = (function() {
       }
     },
     /**
-     * Call the passed function when all aquired barriers have been released.
+     * Call the passed function when all acquired barriers have been released.
      * If no barriers are currently taken, the function is called immediately.
      *
      * Arguments:
