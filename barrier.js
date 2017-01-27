@@ -42,7 +42,7 @@ window.Barrier = (function() {
    * Instantiate the barrier
    *
    * Arguments:
-   *   n - (optinal) initiate with n barriers pre-acquired.
+   *   n - (optional) initiate with n barriers pre-acquired.
    *
    * Throws:
    *   Error if n < 0
@@ -69,7 +69,7 @@ window.Barrier = (function() {
       return this.value > 0;
     },
     /**
-     * Aquire the barrier.
+     * Acquire the barrier.
      *
      * Arguments:
      *   n - (optional) acquire n barriers
